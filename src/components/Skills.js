@@ -1,11 +1,10 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import backendIcon from "../assets/img/skills-icons/backend-icon.png";
+import cloudIcon from "../assets/img/skills-icons/cloud-icon.png";
+import frontendIcon from "../assets/img/skills-icons/frontend-icon.png";
+import dataIcon from "../assets/img/skills-icons/data-icon.png";
 
 export const Skills = () => {
   const responsive = {
@@ -33,28 +32,30 @@ export const Skills = () => {
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+                    <h2>Skills</h2>
+                    <p>Full Stack Software Engineer with expertise in backend development, cloud services, and modern web technologies.<br></br> Experienced in building scalable, secure systems and RESTful APIs.</p>
+                    <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <div className="item">
+                            <img src={backendIcon} alt="Backend Development" className="skill-icon" />
+                            <h5>Backend Development</h5>
+                            <p>Python, Flask, Go, REST APIs, PostgreSQL</p>
+                        </div>
+                        <div className="item">
+                            <img src={cloudIcon} alt="Cloud & DevOps" className="skill-icon" />
+                            <h5>Cloud & DevOps</h5>
+                            <p>AWS, Docker, Terraform, CI/CD</p>
+                        </div>
+                        <div className="item">
+                            <img src={frontendIcon} alt="Frontend Development" className="skill-icon" />
+                            <h5>Frontend Development</h5>
+                            <p>React, JavaScript, TypeScript, HTML/CSS</p>
+                        </div>
+                        <div className="item">
+                            <img src={dataIcon} alt="Data & Analytics" className="skill-icon" />
+                            <h5>Data & Analytics</h5>
+                            <p>Pandas, NumPy, Matplotlib, Data Visualization</p>
+                        </div>
+                    </Carousel>
                 </div>
             </div>
         </div>

@@ -302,36 +302,62 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 100px 0 50px 0;
   position: relative;
 }
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
+
 .skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+  text-align: center;
 }
+
 .skill-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+
+.skill-slider .item {
+  text-align: center;
+  padding: 30px;
+  transition: all 0.3s ease;
 }
+
+.skill-slider .item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-slider .item h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.skill-slider .item p {
+  color: #B8B8B8;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
 .background-image-left {
   top: 28%;
   position: absolute;
@@ -340,26 +366,126 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.skill .item {
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.skill .item:hover {
+  transform: translateY(-5px);
+}
+
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
+  padding: 100px 0;
   position: relative;
-  background-color: black;
 }
+
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
+  margin-bottom: 20px;
 }
+
 .project p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px auto 30px auto;
+  margin: 14px 0 75px 0;
   text-align: center;
-  width: 56%;
 }
+
+.proj-card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  height: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.proj-card:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.proj-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.proj-card h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.proj-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.proj-card:hover .proj-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.proj-description p {
+  color: #B8B8B8;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.github-link {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.github-icon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.github-link:hover .github-icon {
+  transform: scale(1.1);
+  filter: brightness(0) invert(0.8);
+}
+
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
@@ -540,7 +666,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 20px 0;
+  position: relative;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -614,5 +741,5 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 14px;
   color: #B8B8B8;
   letter-spacing: 0.5px;
-  margin-top: 20px;
+  margin: 0;
 }
